@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=description
+        content="Coding tricks, featured coding articles for many programming languages, best templates for web development created using pure html, CSS and Javascript.">
+    <meta name=keywords content="html, css, blog, coding, article, python, blog, technology, unicorn">
+    <link rel=stylesheet href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/logo.png" type=image/x-icon>
+    <title>About us - UnicornCSS</title>
+</head>
+
+<body>
+    <nav class="bg-white shadow-md">
+        <div class="container px-4 py-4 mx-auto">
+            <div class="lg:flex lg:items-center">
+                <div class="flex items-center justify-between">
+                    <div><a class="text-xl font-bold text-gray-800 transition-colors duration-300 transform lg:text-xl hover:text-gray-700 flex items-center"
+                            href='/'><img src="assets/img/logo.png" height=50 width=50 alt=""><span
+                                class=px-2>UnicornCSS</span></a></div>
+                    <div class="flex lg:hidden"><button x-cloak @click="isOpen = !isOpen" type=button
+                            class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                            aria-label="toggle menu"><svg x-show=!isOpen xmlns=http://www.w3.org/2000/svg
+                                class="w-6 h-6 lg:hidden" id=ham fill=none viewBox="0 0 24 24" stroke=currentColor
+                                stroke-width=2>
+                                <path stroke-linecap=round stroke-linejoin=round d="M4 8h16M4 16h16" />
+                            </svg></button></div>
+                </div>
+                <div class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between opacity-0 -translate-x-full"
+                    id=nav>
+                    <div
+                        class="flex flex-col text-gray-600 capitalize lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+                        <a href=/
+                            class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900">Home</a><a
+                            href=/blog.html
+                            class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900">Blog</a><a
+                            href=/about.html
+                            class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900">About</a><a
+                            href=/contact.html
+                            class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900">Contact</a>
+                    </div>
+                    <div class="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2"><a href=#
+                            class="mx-2 text-gray-600 transition-colors duration-300 transform hover:text-gray-500"
+                            aria-label=Guthub><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                                xmlns=http://www.w3.org/2000/svg>
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg></a><a href=#
+                            class="mx-2 text-gray-600 transition-colors duration-300 transform hover:text-gray-500"
+                            aria-label=Facebook><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                                xmlns=http://www.w3.org/2000/svg>
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg></a><a href=#
+                            class="mx-2 text-gray-600 transition-colors duration-300 transform hover:text-gray-500"
+                            aria-label=Instagram><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                                xmlns=http://www.w3.org/2000/svg>
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg></a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="py-3 w-10/12 mx-auto">
+        <div class="container px-6 py-10 mx-auto">
+            <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl">UnicornCSS <br> <span
+                    class=text-pink-600>Debug your code</span></h1>
+            <p class="mt-4 text-gray-500 xl:mt-6">Featured coding articles for many programming languages, best
+                templates for web development created using pure html, CSS and Javascript</p>
+            <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+                <div class="p-8 space-y-3 border-2 border-blue-400 rounded-xl"><span
+                        class="inline-block text-blue-500"><svg xmlns=http://www.w3.org/2000/svg class="w-8 h-8"
+                            fill=none viewBox="0 0 24 24" stroke=currentColor>
+                            <path stroke-linecap=round stroke-linejoin=round stroke-width=2
+                                d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                            <path stroke-linecap=round stroke-linejoin=round stroke-width=2
+                                d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                        </svg></span>
+                    <h1 class="text-2xl font-semibold text-gray-700 capitalize">What is UnicornCSS</h1>
+                    <p class=text-gray-500>UnicornCSS is platform where you get featured coding articles for many
+                        programming languages, best components for web development created using pure html, CSS and
+                        Javascript</p><a href=/
+                        class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 hover:underline hover:text-blue-600"><svg
+                            xmlns=http://www.w3.org/2000/svg class="w-6 h-6" fill=none viewBox="0 0 24 24"
+                            stroke=currentColor>
+                            <path stroke-linecap=round stroke-linejoin=round stroke-width=2
+                                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg></a>
+                </div>
+                <div class="p-8 space-y-3 border-2 border-blue-400 rounded-xl"><span
+                        class="inline-block text-blue-500"><svg xmlns=http://www.w3.org/2000/svg class="w-8 h-8"
+                            fill=none viewBox="0 0 24 24" stroke=currentColor>
+                            <path stroke-linecap=round stroke-linejoin=round stroke-width=2
+                                d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                        </svg></span>
+                    <h1 class="text-2xl font-semibold text-gray-700 capitalize">Premium Templates</h1>
+                    <p class=text-gray-500>Premium web Templates coming soon</p><a href=#
+                        class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 hover:underline hover:text-blue-600"><svg
+                            xmlns=http://www.w3.org/2000/svg class="w-6 h-6" fill=none viewBox="0 0 24 24"
+                            stroke=currentColor>
+                            <path stroke-linecap=round stroke-linejoin=round stroke-width=2
+                                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg></a>
+                </div>
+                <div class="p-8 space-y-3 border-2 border-blue-400 rounded-xl"><span
+                        class="inline-block text-blue-500"><svg xmlns=http://www.w3.org/2000/svg class="w-8 h-8"
+                            fill=none viewBox="0 0 24 24" stroke=currentColor>
+                            <path stroke-linecap=round stroke-linejoin=round stroke-width=2
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg></span>
+                    <h1 class="text-2xl font-semibold text-gray-700 capitalize">Coding Blog</h1>
+                    <p class=text-gray-500>Featured coding articles for many programming languages</p><a href=/blog.html
+                        class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 hover:underline hover:text-blue-600"><svg
+                            xmlns=http://www.w3.org/2000/svg class="w-6 h-6" fill=none viewBox="0 0 24 24"
+                            stroke=currentColor>
+                            <path stroke-linecap=round stroke-linejoin=round stroke-width=2
+                                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="flex flex-col items-center justify-between p-6 bg-white sm:flex-row">
+        <a href=/
+            class="text-xl font-bold text-gray-600 transition-colors duration-300 hover:text-gray-700 flex items-center"><img
+                src="assets/img/logo.png" height=50 width=50 alt=""><span class=px-2>UnicornCSS</span></a>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <p class="text-sm text-gray-600">© Copyright 2021. All Rights Reserved</p><a class="text-gray-500 px-2"
+                href=/privacy-policy.html>Privacy-policy</a><a class=text-gray-500 href=/dmca.html>DMCA</a>
+        </div>
+        <div class="flex -mx-2 mt-2 lg:mt-0"><a href=#
+                class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500" aria-label=Github><svg
+                    class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none xmlns=http://www.w3.org/2000/svg>
+                    <path
+                        d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                    </path>
+                </svg></a><a href=# class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500"
+                aria-label=Facebook><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                    xmlns=http://www.w3.org/2000/svg>
+                    <path
+                        d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                    </path>
+                </svg></a><a href=# class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500"
+                aria-label=Reddit><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                    xmlns=http://www.w3.org/2000/svg>
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                    </path>
+                </svg></a></div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
