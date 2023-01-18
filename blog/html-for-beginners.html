@@ -6,11 +6,12 @@
     <meta http-equiv=X-UA-Compatible content="IE=edge">
     <meta name=viewport content="width=device-width,initial-scale=1">
     <meta name=description
-        content="Coding tricks, featured coding articles for many programming languages, best templates for web development created using pure html, CSS and Javascript.">
-    <meta name=keywords content="html, css, blog, coding, article, python, blog, technology, unicorn">
-    <link rel=stylesheet href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/img/logo.png" type=image/x-icon>
-    <title>Featured coding articles for many programming languages - UnicornCSS</title>
+        content="The full form of HTML is Hypertext Markup Language. It is used to create and structure web pages. It is the backbone of any website. HTML uses a series of tags">
+    <meta name=keywords
+        content="html, css, What is HTML, coding, What is HTML used for, HTML full form, HTML stands for, html tags, unicorn">
+    <link rel=stylesheet href="/assets/css/style.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type=image/x-icon>
+    <title>HTML for beginners, What is HTML - Unicorncss</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GT5X9CH1KQ"></script>
     <script>
@@ -20,6 +21,15 @@
 
         gtag('config', 'G-GT5X9CH1KQ');
     </script>
+    <style>
+        code pre {
+            padding: .75rem;
+            margin: 1.4rem 0;
+            background-color: rgb(29, 26, 26);
+            border-radius: 6px;
+            color: whitesmoke;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +38,7 @@
             <div class="lg:flex lg:items-center">
                 <div class="flex items-center justify-between">
                     <div><a class="text-xl font-bold text-gray-800 transition-colors duration-300 transform lg:text-xl hover:text-gray-700 flex items-center"
-                            href= /><img src="assets/img/logo.png" height=50 width=50 alt=""><span
+                            href= /><img src="/assets/img/logo.png" height=50 width=50 alt=""><span
                             class=px-2>UnicornCSS</span></a></div>
                     <div class="flex lg:hidden"><button x-cloak @click="isOpen = !isOpen" type=button
                             class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
@@ -77,52 +87,97 @@
             </div>
         </div>
     </nav>
-    <section class="bg-gray-100 lg:px-8">
-        <div class="container px-6 py-10 mx-auto">
-            <h1 class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-left lg:text-4xl">Our Blog
-            </h1>
-            <div class="flex flex-col w-11/12 mx-auto lg:w-2/3 lg:mx-4 mt-0 xl:mt-6">
-                <div class="flex items-end my-4 overflow-hidden bg-cover rounded-lg min-h-fit shadow-md">
-                    <div class="w-full px-8 py-4 overflow-hidden rounded-b-lg backdrop-blur-sm bg-white">
-                        <h2 class="mt-3 text-2xl font-semibold text-gray-800 capitalize">How does a website works?</h2>
-                        <p class="mt-2 text-lg tracking-wider text-gray-500 uppercase ">A website is a group of web
-                            pages that consists of links, buttons, headings...</p>
-                        <button href="" class="text-black bg-none border-none hover:text-gray-900 mt-2 mb-3"><a
-                                href="/blog/how-does-a-website-works.html">Read more</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col w-11/12 mx-auto lg:w-2/3 lg:mx-4 mt-0 xl:mt-6">
-                <div class="flex items-end my-4 overflow-hidden bg-cover rounded-lg min-h-fit shadow-md">
-                    <div class="w-full px-8 py-4 overflow-hidden rounded-b-lg backdrop-blur-sm bg-white">
-                        <h2 class="mt-3 text-2xl font-semibold text-gray-800 capitalize">HTML for beginners</h2>
-                        <p class="mt-2 text-lg tracking-wider text-gray-500 uppercase ">The full form of HTML is
-                            Hypertext Markup Language. It is used to create and structure web pages. It is the backbone
-                            of any website...</p>
-                        <button href="" class="text-black bg-none border-none hover:text-gray-900 mt-2 mb-3"><a
-                                href="/blog/html-for-beginners.html">Read more</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="flex mx-4 my-3"><a href=""
-                    class="flex items-center justify-center px-4 py-2 mx-1 text-gray-500 capitalize bg-white rounded-md cursor-not-allowed rtl:-scale-x-100"><svg
-                        xmlns=http://www.w3.org/2000/svg class="w-5 h-5" viewBox="0 0 20 20" fill=currentColor>
-                        <path fill-rule=evenodd
-                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                            clip-rule=evenodd />
-                    </svg></a> <a href=""
-                    class="flex items-center justify-center px-4 py-2 mx-1 text-gray-500 transition-colors duration-300 transform bg-white rounded-md cursor-not-allowed rtl:-scale-x-100"><svg
-                        xmlns=http://www.w3.org/2000/svg class="w-5 h-5" viewBox="0 0 20 20" fill=currentColor>
-                        <path fill-rule=evenodd
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule=evenodd />
-                    </svg></a></div>
-        </div>
+    <section class="my-8 w-11/12 mx-auto md:w-9/12 lg:w-7/12">
+        <h1 class="text-3xl lg:text-4xl font-semibold mb-2">HTML for beginners, What is HTML?</h1>
+        <p class="text-sm text-gray-600">Last modified - 18-01-2023</p>
+        <hr class="my-3">
+        <p>If you are working in website or software industry you may have heard the term HTML, so have you ever wondered
+            what is HTML? Where it is used? In this article we are going to read about HTML, its attribute and some of its
+            tags. The full form of HTML is Hypertext Markup Language. It is used to create and structure web pages. HTML
+            uses a series of tags and attributes to define the structure and layout of a web page, it includes headings,
+            paragraphs, images, and links. It is the backbone of any website.</p><br>
+        <h2 class="text-2xl font-semibold">What is HTML used for?</h2><br>
+        <p>HTML is primarily used for creating the structure and layout of web pages. It provides a way to describe the
+            content of a web page using a set of tags and elements, such as headings, paragraphs, images, and links. These
+            elements are used to define the structure of the content on a web page, and can be styled using Cascading Style
+            Sheets (CSS) to control the visual presentation and design of the page. HTML is used to create static web pages,
+            which can be viewed in a web browser and do not change unless the source code is manually updated. HTML is also
+            used as the foundation of many web-based applications and dynamic websites, which use scripting languages like
+            JavaScript to create interactive and responsive user interfaces.</p><br>
+            <img src="imgs/2-1.jfif" alt="html, css, What is HTML, coding, What is HTML used for, HTML full form, HTML stands for, html tags, how html and css work"><br>
+        <h2 class="text-2xl font-semibold">Basic structure of HTML code</h2><br>
+        <p>The basic structure of an HTML code in known as HTML boilerplate, it includes the doctype declaration, head
+            section (with meta information and links to CSS and JavaScript files), and body section. It may also include
+            commonly used elements such as a header, navigation, and footer. Additionally, it may include some basic CSS
+            styles and JavaScript code to help with things like responsive design and cross-browser compatibility. However,
+            the exact contents of an HTML boilerplate can vary depending on the specific needs of the project and the
+            preferences of the developer or the client.</p>
+        <code class="code">
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head>
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title>Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+                    
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </code>
+        <h2 class="text-2xl font-semibold">Heading tag in HTML</h2><br>
+        <p>In HTML, heading tags are used to create headings and subheadings in a document. There are six heading tags in
+            html, with the most important headings being denoted by the <code>&lt;h1&gt;</code> tag and the least important
+            by <code>&lt;h6&gt;</code> tag. Here is an example of how they are used:</p>
+        <code class="code">
+            <pre>
+&lt;h1&gt;This is a main heading&lt;/h1&gt;
+&lt;h2&gt;This is a subheading&lt;/h2&gt;
+&lt;h3&gt;This is a sub-subheading&lt;/h3&gt;</pre>
+        </code>
+        <p>The text within the heading tags is usually rendered in a larger and bolder font than the surrounding text, and
+            it is used to organize the content of the document, it makes the content easy to understand. Search engines also
+            use the heading tags to understand the structure and hierarchy of the content on a page, so it is important to
+            use them correctly and in a meaningful way.</p><br>
+        <h2 class="text-2xl font-semibold">Paragraph tag in HTML</h2><br>
+        <p>In HTML, the <code>&lt;p&gt;</code> tag is used to create a paragraph. The text that appears between the opening
+            <code>&lt;p&gt;</code> tag and the closing <code>&lt;/p&gt;</code> tag is rendered as a block of text with a
+            default margin at the top and bottom. Here is an example of how it is used:
+        </p>
+        <code class="code">
+            <pre>
+&lt;p&gt;This is a paragraph. It can contain multiple sentences and it can be styled using CSS&lt;/p&gt;</pre>
+        </code>
+        <p>The &lt;p&gt; tag is a block-level element, which means it takes up the full width of its parent container for example a &lt;p&gt; tag is in written in the &lt;body&gt; section then it takes the full width of the section and creates a new line before and after the element. The text inside the &lt;p&gt; tag is usually rendered in the browser's default font and size, but it can be styled and changed using CSS.</p><br>
+        <h2 class="text-2xl font-semibold">Div tag in HTML</h2><br>
+        <p>In HTML, the &lt;div&gt; tag is a block-level element like &lt;p&gt; tag, it brings other elements like heading paragraphs together it is useful for styling means you can style many elements using a single &lt;div&gt; tag. The &lt;div&gt; tag works like a container for other HTML elements. Here's an example of how the &lt;div&gt; tag is used:</p>
+        <code class="code">
+            <pre>
+&lt;div&gt;
+    &lt;p&gt;This is some text in a paragraph element&lt;/p&gt;
+    &lt;p&gt;This is some text in an another paragraph element&lt;/p&gt;
+&lt;div&gt;</pre>
+        </code>
+        <p>In this example, the &lt;div&gt; tag is used to group two &lt;p&gt; tags together. This allows you to apply styles to both paragraphs at once, instead of applying the styles to each paragraph separately.</p>
+        <p>The &lt;div&gt; tag does not have any default formatting like margin and padding, so it's often used as a container for other elements. You can add styles to the div element by assigning it a class or id and target it with CSS.</p><br>
+        <p>It's important to note that when using &lt;div&gt; tags to group elements, semantic tags like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt; should also be used when required. These elements not only help with styling but also give the web page a meaningful structure.</p><br>
+        <h2 class="text-2xl font-semibold">Img tag in HTML</h2><br>
+        <p>In HTML, the &lt;img&gt; tag is used to embed images in a web page. The &lt;img&gt; tag is a self-closing, empty tag, which means it doesn't have a closing tag and doesn't contain any content. Here's an example of how the &lt;img&gt; tag is used:</p>
+        <code class="code">
+            <pre>
+&lt;img&gt;img src="image.jpg" alt="A description of the image"&lt;/img&gt;</pre>
+        </code>
+        <p>The src attribute is used to specify the URL of the image to be displayed. The alt attribute is used to provide a text description of the image it helps in the seo of image and the web page, it will be displayed if the image is not loaded. The &lt;img&gt; tag also has other attributes such as width, height, style, class, etc. You can use these attributes to control the size and appearance of the image.</p><br>
+        <p>It's important to note that the &lt;img&gt; tag is not a semantic element, it's used to embed images in the web page, it doesn't give any meaning to the content. If you want to include an image with a caption or a figure with something, you can use the &lt;figure&gt; and &lt;figcaption&gt; elements. So these were some the basic HTML elements, you can follow us on our social media handles and for more coding related article visit here.</p>
+
+
     </section>
     <footer class="flex flex-col items-center justify-between p-6 bg-white sm:flex-row">
         <a href=/
             class="text-xl font-bold text-gray-600 transition-colors duration-300 hover:text-gray-700 flex items-center"><img
-                src="assets/img/logo.png" height=50 width=50 alt=""><span class=px-2>UnicornCSS</span></a>
+                src="/assets/img/logo.png" height=50 width=50 alt=""><span class=px-2>UnicornCSS</span></a>
         <div class="flex flex-col md:flex-row items-center justify-between">
             <p class="text-sm text-gray-600">© Copyright 2021. All Rights Reserved</p><a class="text-gray-500 px-2"
                 href=/privacy-policy.html>Privacy-policy</a><a class=text-gray-500 href=/dmca.html>DMCA</a>
@@ -147,7 +202,7 @@
                     </path>
                 </svg></a></div>
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
