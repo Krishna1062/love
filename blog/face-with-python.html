@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=description content="Face recognition systems employ a combination of computer vision and machine learning techniques to detect, analyze, and identify human faces from images or video streams">
+    <meta name=keywords
+        content="Face Recognition System using AI, Face Recognition, Face Recognition with python, ai project">
+    <link rel=stylesheet href="/assets/css/style.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type=image/x-icon>
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <title>Building a Face Recognition System using AI: Unlocking the Power of Facial Biometrics</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GT5X9CH1KQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GT5X9CH1KQ');
+    </script>
+    <style>
+        code pre {
+            padding: .75rem;
+            margin: 1.4rem 0;
+            background-color: rgb(29, 26, 26);
+            border-radius: 6px;
+            color: whitesmoke;
+            overflow-x: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="bg-white shadow-md">
+        <div class="container px-4 py-4 mx-auto">
+            <div class="lg:flex lg:items-center">
+                <div class="flex items-center justify-between">
+                    <div><a class="text-xl font-bold text-gray-800 transition-colors duration-300 transform lg:text-xl hover:text-gray-700 flex items-center"
+                            href= /><img src="/assets/img/logo.png" height=50 width=50 alt=""><span
+                            class=px-2>UnicornCSS</span></a></div>
+                    <div class="flex lg:hidden"><button x-cloak @click="isOpen = !isOpen" type=button
+                            class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                            aria-label="toggle menu"><svg x-show=!isOpen xmlns=http://www.w3.org/2000/svg
+                                class="w-6 h-6 lg:hidden" id=ham fill=none viewBox="0 0 24 24" stroke=currentColor
+                                stroke-width=2>
+                                <path stroke-linecap=round stroke-linejoin=round d="M4 8h16M4 16h16" />
+                            </svg></button></div>
+                </div>
+                <div class="absolute inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between opacity-0 -translate-x-full"
+                    id=nav>
+                    <div
+                        class="flex flex-col text-gray-600 capitalize lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+                        <a href=/
+                            class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900">Home</a><a
+                            href=/blog.html
+                            class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900">Blog</a><a
+                            href=/about.html
+                            class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900">About</a><a
+                            href=/contact.html
+                            class="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900">Contact</a>
+                    </div>
+                    <div class="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2"><a href=#
+                            class="mx-2 text-gray-600 transition-colors duration-300 transform hover:text-gray-500"
+                            aria-label=Guthub><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                                xmlns=http://www.w3.org/2000/svg>
+                                <path
+                                    d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                </path>
+                            </svg></a><a href=#
+                            class="mx-2 text-gray-600 transition-colors duration-300 transform hover:text-gray-500"
+                            aria-label=Facebook><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                                xmlns=http://www.w3.org/2000/svg>
+                                <path
+                                    d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                </path>
+                            </svg></a><a href=#
+                            class="mx-2 text-gray-600 transition-colors duration-300 transform hover:text-gray-500"
+                            aria-label=Instagram><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                                xmlns=http://www.w3.org/2000/svg>
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg></a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="my-8 w-11/12 mx-auto md:w-9/12 lg:w-7/12">
+        <h1 class="text-3xl lg:text-4xl font-semibold mb-2">Building a Face Recognition System using AI: Unlocking the Power of Facial Biometrics</h1>
+        <p class="text-sm text-gray-600">Last modified - 20-05-2023</p>
+        <hr class="my-3">
+        <p>In today's digital era, the demand for secure and reliable authentication systems is growing exponentially. Face recognition, a branch of artificial intelligence, has emerged as a highly promising technology for identity verification. Leveraging deep learning algorithms and computer vision techniques, face recognition systems have revolutionized various industries, including security, access control, and personalized user experiences. In this article, we will explore the process of creating a face recognition system using AI, discussing the underlying concepts, the necessary steps, and providing a code implementation to showcase its implementation.</p><p><br /></p><img src="/blog/imgs/21-1.png" alt="face recognition"><br><p class="text-2xl font-semibold">I. Understanding the Basics of Face Recognition</p><p><br /></p><p>Face recognition systems employ a combination of computer vision and machine learning techniques to detect, analyze, and identify human faces from images or video streams. These systems utilize deep neural networks, particularly convolutional neural networks (CNNs), to extract meaningful features from facial images and match them against a database of known identities.</p><p><br /></p><p class="text-2xl font-semibold">II. Dataset Collection and Preprocessing</p><p><br /></p><p>A crucial step in building an effective face recognition system is the availability of a diverse and representative dataset. Collecting a dataset encompassing a wide range of facial expressions, poses, lighting conditions, and ethnicities helps in training a robust model. The dataset should be appropriately annotated with corresponding identity labels.</p><p><br /></p><p>Preprocessing steps involve techniques such as face detection, alignment, and normalization. Face detection algorithms like Haar cascades or deep learning-based approaches identify facial regions within an image or video frame. Next, the faces are aligned to a canonical pose, ensuring consistent orientation for feature extraction. Normalization techniques like histogram equalization or adaptive histogram equalization enhance image quality and reduce lighting variations.</p><p><br /></p><p class="text-2xl font-semibold">III. Feature Extraction with Convolutional Neural Networks</p><p><br /></p><p>Convolutional Neural Networks (CNNs) are the cornerstone of modern face recognition systems. CNNs are capable of automatically learning discriminative features from raw pixel data. Transfer learning using pre-trained models such as VGGFace, FaceNet, or DeepFace can be advantageous, as these models are trained on large-scale datasets and capture high-level facial features.</p><p><br /></p><p>During feature extraction, the pre-trained CNN model is used to extract a fixed-length vector representation, known as an embedding, from each face image. This embedding encodes the essential facial characteristics necessary for identification. Notably, this encoding should be invariant to irrelevant variations such as lighting, pose, and facial expressions, while being discriminative enough to differentiate between different individuals.</p><p><br /></p><p class="text-2xl font-semibold">IV. Building the Face Recognition Model</p><p><br /></p><p>The extracted facial embeddings are then used to train a classification model, such as a support vector machine (SVM) or a softmax classifier. This model learns to map the embeddings to specific identities, enabling accurate face recognition. During training, the model optimizes its parameters to minimize the difference between predicted and actual identities.</p><p><br /></p><p>To evaluate the performance of the face recognition system, it is crucial to split the dataset into training and testing sets. This allows for the assessment of the model's accuracy, precision, recall, and F1 score. Additionally, techniques like k-fold cross-validation can be employed to obtain more robust performance metrics.</p><p><br /></p><p class="text-2xl font-semibold">V. Implementation of the Face Recognition System using Python&nbsp;</p><p><br /></p><p>Below is a simplified code implementation of a face recognition system using Python and the popular open-source library, OpenCV:</p><p><br /></p> <code class="code"><pre><p># Import required libraries</p><p><span style="color: red;">import</span> cv2</p><p><span style="color: red;">import</span> numpy <span style="color: red;">as</span> np</p><p><br /></p><p># Load pre-trained face detection and recognition models</p><p>face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')</p><p>model = cv2.face.LBPHFaceRecognizer_create()</p><p><br /></p><p># Load training data</p><p>model.read('trained_model.yml')</p><p><br /></p><p># Initialize video capture</p><p>cap = cv2.VideoCapture(0)</p><p><br /></p><p><span style="color: red;">while</span> <span style="color: red;">True</span>:</p><p>&nbsp; &nbsp; ret, frame = cap.read()</p><p><br /></p><p>&nbsp; &nbsp; # Convert frame to grayscale for face detection</p><p>&nbsp; &nbsp; gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)</p><p><br /></p><p>&nbsp; &nbsp; # Detect faces in the frame</p><p>&nbsp; &nbsp; faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))</p><p><br /></p><p>&nbsp; &nbsp; # Iterate over detected faces</p><p>&nbsp; &nbsp; <span style="color: red;">for</span> (x, y, w, h) <span style="color: red;">in</span> faces:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; # Extract the region of interest (ROI) containing the face</p><p>&nbsp; &nbsp; &nbsp; &nbsp; face_roi = gray[y:y+h, x:x+w]</p><p><br /></p><p>&nbsp; &nbsp; &nbsp; &nbsp; # Resize ROI to match the input size of the model</p><p>&nbsp; &nbsp; &nbsp; &nbsp; face_roi = cv2.resize(face_roi, (160, 160))</p><p><br /></p><p>&nbsp; &nbsp; &nbsp; &nbsp; # Perform face recognition</p><p>&nbsp; &nbsp; &nbsp; &nbsp; label, confidence = model.predict(face_roi)</p><p><br /></p><p>&nbsp; &nbsp; &nbsp; &nbsp; # Draw a rectangle around the face</p><p>&nbsp; &nbsp; &nbsp; &nbsp; cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)</p><p><br /></p><p>&nbsp; &nbsp; &nbsp; &nbsp; # Display predicted label and confidence</p><p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: red;">if</span> confidence &lt; 100:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text = f"Label: {label}, Confidence: {round(confidence, 2)}"</p><p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: red;">else</span>:</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; text = "Unknown"</p><p><br /></p><p>&nbsp; &nbsp; &nbsp; &nbsp; cv2.putText(frame, text, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)</p><p><br /></p><p>&nbsp; &nbsp; # Display the resulting frame</p><p>&nbsp; &nbsp; cv2.imshow('Face Recognition', frame)</p><p><br /></p><p>&nbsp; &nbsp; # Break the loop if 'q' is pressed</p><p>&nbsp; &nbsp; <span style="color: red;">if</span> cv2.waitKey(1) &amp; 0xFF == ord('q'):</p><p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: red;">break</span></p><p><br /></p><p># Release the capture and destroy all windows</p><p>cap.release()</p><p>cv2.destroyAllWindows()</p><p><br /></p><p><br /></p></pre></code><p class="text-2xl font-semibold">Conclusion</p><p><br /></p><p>Face recognition systems have witnessed significant advancements due to the integration of artificial intelligence and computer vision techniques. These systems offer a range of applications, including secure access control, surveillance, and personalized user experiences. By leveraging deep learning algorithms and convolutional neural networks, it is possible to build robust face recognition models that can accurately identify individuals from images or video streams. The provided code implementation serves as a starting point for building your face recognition system using Python and OpenCV. As technology continues to advance, face recognition systems are poised to play a pivotal role in enhancing security and providing seamless user experiences across various industries.</p><p><br /></p><p class="text-3xl font-semibold">FAQs related Face recognition</p><p><br /></p><h2 class="text-2xl font-semibold" style="text-align: left;">What is face recognition?</h2><p><br /></p><p>Face recognition is a technology that uses algorithms to analyze and identify human faces. It involves capturing facial images or video frames, extracting unique facial features, and matching them against a database of known identities.</p><p><br /></p><h2 class="text-2xl font-semibold" style="text-align: left;">How does face recognition work?</h2><p><br /></p><p>Face recognition systems typically follow these steps:</p><p>&nbsp; &nbsp;- Face detection: Locating and extracting facial regions from images or video frames.</p><p>&nbsp; &nbsp;- Feature extraction: Analyzing the extracted faces to identify distinctive features such as the position of the eyes, nose, and mouth.</p><p>&nbsp; &nbsp;- Matching: Comparing the extracted features with a database of known faces to determine a match.</p><p><br /></p><h2 class="text-2xl font-semibold" style="text-align: left;">What are the main applications of face recognition?&nbsp;</h2><p><br /></p><p>Face recognition has a wide range of applications, including:</p><p>&nbsp; &nbsp;- Security and surveillance: Identifying individuals for access control and monitoring purposes.</p><p>&nbsp; &nbsp;- Law enforcement: Assisting in criminal investigations by matching faces in CCTV footage or forensic images.</p><p>&nbsp; &nbsp;- Personal devices: Enabling facial unlocking of smartphones, tablets, and laptops.</p><p>&nbsp; &nbsp;- Identity verification: Verifying identities for secure transactions or access to restricted areas.</p><p>&nbsp; &nbsp;- Personalized experiences: Customizing user experiences in applications such as social media or targeted advertising.</p><p><br /></p><h2 class="text-2xl font-semibold" style="text-align: left;">How accurate is face recognition?</h2><p><br /></p><p>The accuracy of face recognition systems depends on several factors, including the quality of the input images, variations in lighting conditions, pose, and occlusions. Advanced face recognition algorithms based on deep learning techniques have significantly improved accuracy rates, achieving near-human performance in some cases.</p><p><br /></p><h2 class="text-2xl font-semibold" style="text-align: left;">Can face recognition be fooled by using photographs or masks?</h2><p><br /></p><p>Traditional face recognition systems can be susceptible to spoofing attacks using printed photographs or masks. However, modern systems employ anti-spoofing techniques such as liveness detection, which verifies the presence of live human characteristics (e.g., eye movements or facial expressions), to mitigate such risks.</p><p><br /></p><h2 class="text-2xl font-semibold" style="text-align: left;">What are the privacy concerns associated with face recognition?</h2><p><br /></p><p>Face recognition raises privacy concerns related to the collection and storage of biometric data. Issues include consent for data collection, secure storage and handling of facial images, and the potential for misuse or unauthorized access. Organizations implementing face recognition systems must adhere to privacy laws and regulations and take measures to protect individuals' privacy rights.</p><p><br /></p><h2 class="text-2xl font-semibold" style="text-align: left;">Can face recognition work in real-time?</h2><p><br /></p><p>Yes, face recognition can be implemented in real-time, especially with the advancements in hardware and deep learning algorithms. Real-time face recognition systems can process live video streams or camera feeds and provide immediate results for identification or verification purposes.</p><p><br /></p><h2 class="text-2xl font-semibold" style="text-align: left;">Are there any ethical considerations with face recognition technology?</h2><p><br /></p><p>Yes, there are ethical considerations associated with face recognition, including potential biases in the system's performance across different demographics, invasion of privacy, and the responsible use of the technology in areas such as surveillance. It is important to ensure transparency, fairness, and accountability in the development and deployment of face recognition systems.</p><p></p>
+    </section>
+    <footer class="flex flex-col items-center justify-between p-6 bg-white sm:flex-row">
+        <a href=/
+            class="text-xl font-bold text-gray-600 transition-colors duration-300 hover:text-gray-700 flex items-center"><img
+                src="/assets/img/logo.png" height=50 width=50 alt=""><span class=px-2>UnicornCSS</span></a>
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <p class="text-sm text-gray-600">© Copyright 2021. All Rights Reserved</p><a class="text-gray-500 px-2"
+                href=/privacy-policy.html>Privacy-policy</a><a class=text-gray-500 href=/dmca.html>DMCA</a>
+        </div>
+        <div class="flex -mx-2 mt-2 lg:mt-0"><a href=#
+                class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500" aria-label=Github><svg
+                    class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none xmlns=http://www.w3.org/2000/svg>
+                    <path
+                        d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                    </path>
+                </svg></a><a href=# class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500"
+                aria-label=Facebook><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                    xmlns=http://www.w3.org/2000/svg>
+                    <path
+                        d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                    </path>
+                </svg></a><a href=# class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500"
+                aria-label=Reddit><svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill=none
+                    xmlns=http://www.w3.org/2000/svg>
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                    </path>
+                </svg></a></div>
+    </footer>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
